@@ -1,5 +1,6 @@
 # Employee NodeJS App
 
+A sample app for lab use cases that use Mongodb as database.
 
 ## Home
 ![alt Home](https://github.com/diegopereiraeng/nodeJS_Employees_App/blob/main/EmployeeKoalaDB/public/images/diegonodejs_home.png)
