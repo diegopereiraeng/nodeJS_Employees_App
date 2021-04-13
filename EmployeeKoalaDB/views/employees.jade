@@ -1,17 +1,30 @@
 extends layout
 
 block content
-  h1= title
-  #employee
-    - each employee in employees
-      div.employee
-        div.created_at= employee.created_at
-        div.title= employee.title
-        div.name= employee.name
-          form( method="post", action="/employee/:id/delete")
-            input(name="_id", type="hidden", value=employee._id.toHexString())
-            input(id="delete", value="X", type="submit")
-          form( method="get", action="/employee/:id/edit")
-            input(name="_id", type="hidden", value=employee._id.toHexString())
-            input(id="edit", value="Edit", type="submit")
+  h1(class='leftClass')= title
+  #employees
+    div.employee
+      table
+        thead
+          tr
+            th(class='dataColumn',style='width:30%') Employee
+            th(class='dataColumn',style='width:30%') Title
+            th(class='dataColumn',style='width:30%') Last Update
+            th(style='width:10%') Manage
+        tbody
+          - each employee in employees
+            tr
+              td(class='dataColumn',style='width:30%')
+                div.name=employee.name
+              td(class='dataColumn',style='width:30%')
+                div.title=employee.title
+              td(class='dataColumn',style='width:30%')
+                div.created_at=employee.created_at
+              td(style='width:10%')
+                form( method="post", action="/employee/:id/delete")
+                  input(name="_id", type="hidden", value=employee._id.toHexString())
+                  input(id="delete", value="X", type="submit") 
+                form( method="get", action="/employee/:id/edit")
+                  input(name="_id", type="hidden", value=employee._id.toHexString())
+                  input(id="edit", value="Edit", type="submit")
     a(href="/")!= "Back to Home"

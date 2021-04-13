@@ -1,1 +1,3 @@
-# nodeJS_Employees_App
+# Employee NodeJS App
+
+![alt Home](http://url/to/img.png)

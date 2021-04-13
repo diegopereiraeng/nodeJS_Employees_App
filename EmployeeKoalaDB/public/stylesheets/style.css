@@ -19,11 +19,48 @@ h1 {
   text-shadow: 1px 2px 2px #ddd;
   font-size: 40px;
 }
+table,
+td,
+th {
+  border-collapse: collapse;
+  text-align: left;
+}
+table {
+  margin: 15px;
+}
+.leftClass {
+  text-align: left;
+  margin: 50px;
+}
+.dataColumn {
+  width: 200px;
+}
+.buttons {
+  width: 20px;
+}
 #employees {
   text-align: left;
-  margin-left: auto;
+  margin-left: 16px;
   margin-right: auto;
-  width: 320px;
+  width: 820px;
+}
+#employees td {
+  border: 1px solid #fff;
+  padding: 8px;
+}
+#employees tr:nth-child(even) {
+  background-color: #fff;
+}
+#employees tr:hover {
+  background-color: #ddd;
+  font-weight: bold;
+}
+#employees th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4caf50;
+  color: #fff;
 }
 #employees .employee {
   margin: 20px;
@@ -32,11 +69,13 @@ h1 {
   display: none;
 }
 #employees .employee .title {
-  font-weight: bold;
-  background-color: #eee;
+  text-align: left;
 }
 #employees .employee .name {
-  background-color: #ffa;
+  text-align: left;
+}
+#employees .employee .name:hover {
+  font-weight: bold;
 }
 .newemployee {
   border: 3px;
@@ -56,7 +95,7 @@ input[type =button],
 input[type =submit] {
   clear: both;
   text-align: left;
-  margin-left: 165px;
+  margin-left: 16px;
   display: block;
 }
 .label {
