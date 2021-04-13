@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  img(src="images/harness.png", title="Harness", aria-label="Harness", alt="Harness")
+  h1= title
+  p 
+  p
+    a(href="/employees")!= "List All Employees"
+  p
+  p
+    a(href="/employee/new")!= "Add New Employee"
+
